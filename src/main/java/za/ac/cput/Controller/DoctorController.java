@@ -21,7 +21,7 @@ public class DoctorController {
 
     //Create
     @RequestMapping(value = "/create",method = RequestMethod.POST)
-    public Doctor create(@RequestBody Doctor doctor){
+    public Doctor create(Doctor doctor){
         Doctor newDoctor = DoctorFactory.createDoctor(doctor.getId(),
                 doctor.getName(),
                 doctor.getLastname(),

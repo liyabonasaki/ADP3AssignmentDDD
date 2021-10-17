@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import za.ac.cput.Entity.Doctor;
 import za.ac.cput.Repository.Impl.DoctorRepository;
 
+import java.util.List;
 import java.util.Set;
 
 //This is the old service
@@ -50,8 +51,8 @@ public class DoctorServiceImpl implements IDoctorService {
     }
 
     @Override
-    public Set<Doctor> getAllDoctor() {
-        return this.repository.getAllDoctor();
+    public List<Doctor> getAllDoctor() {
+        return (List<Doctor>) this.repository.getAllDoctor();
     }
 }
 

@@ -22,7 +22,6 @@
     <table border="1" class="table table-striped table-responsive-md">
         <thead>
         <tr>
-            <th>Doctor ID</th>
             <th>Firstname</th>
             <th>Lastname</th>
             <th>Age</th>
@@ -36,14 +35,20 @@
         </thead>
 
         <tbody>
-        <tr th:each="employee : ${listEmployees}">
-            <td th:text="${employee.firstname}"></td>
-            <td th:text="${employee.lastname}"></td>
-            <td th:text="${employee.email}"></td>
+        <tr th:each="doctor : ${listDoctors}">
+            <td th:text="${doctor.name}"></td>
+            <td th:text="${doctor.lastname}"></td>
+            <td th:text="${doctor.age}"></td>
+            <td th:text="${doctor.gender}"></td>
+            <td th:text="${doctor.phone_number}"></td>
+            <td th:text="${doctor.address}"></td>
+            <td th:text="${doctor.username}"></td>
+            <td th:text="${doctor.password}"></td>
+
             <td><a
-                    th:href="@{_/showFormForUpdate/{id}(id=${employee.id})}"
+                    th:href="@{/showFormForUpdate/{id}(id=${doctor.id})}"
                     class="btn btn-primary">Update</a> <a
-                    th:href="@{/deleteEmployee/{id}(id=${employee.id})}"
+                    th:href="@{/deleteDoctor/{id}(id=${doctor.id})}"
                     class="btn btn-danger">Delete</a></td>
         </tr>
         </tbody>

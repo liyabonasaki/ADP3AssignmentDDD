@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 import za.ac.cput.Entity.Doctor;
 import za.ac.cput.Repository.Impl.DoctorRepositoryUpdated;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -46,13 +48,13 @@ public class DoctorService implements IDoctorService {
     }
 
     @Override
-    public Set<Doctor> getAllDoctor() {
-        return this.repository.findAll().stream().collect(Collectors.toSet());
+    public List<Doctor> getAllDoctor() {
+        return this.repository.findAll();
     }
 
-    public Set<Doctor>getAllDoctorsStartWithA(){
-        Set<Doctor> doctorWithA = new HashSet<>();
-        Set<Doctor> doctors = getAllDoctor();
+    public List<Doctor>getAllDoctorsStartWithA(){
+        List<Doctor> doctorWithA = new ArrayList<>();
+        List<Doctor> doctors = getAllDoctor();
         for(Doctor doctor : doctors){
             if(doctor.getName().trim().toLowerCase().startsWith("a")){
                 doctorWithA.add(doctor);

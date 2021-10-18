@@ -18,11 +18,11 @@ class DoctorRepositoryTest {
     private static DoctorRepository repository = DoctorRepository.getRepository();
 
     private static Doctor doctor1 = DoctorFactory.createDoctor(
-            "d01","Liyabona","Saki",23,"male","078358874","Cape Town","root","master"
+            "1","Liyabona","Saki",23,"male","078358874","Cape Town","root","master"
     );
 
     private static Doctor doctor2 = DoctorFactory.createDoctor(
-            "d02","Emihle","Menzo",22,"female","078358874","Cape Town","mihle","mihle"
+            "255857","Emihle","Menzo",22,"female","078358874","Cape Town","mihle","mihle"
     );
 
 

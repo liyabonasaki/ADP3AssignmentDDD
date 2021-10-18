@@ -46,7 +46,7 @@ public class DoctorController {
 
     @PostMapping ("/saveDoctor")
     public String saveDoctor(@ModelAttribute("doctor") Doctor doctor) {
-        //save employee to database
+        //save doctor to database
         doctorService.create(doctor);
         return "redirect:/";
     }

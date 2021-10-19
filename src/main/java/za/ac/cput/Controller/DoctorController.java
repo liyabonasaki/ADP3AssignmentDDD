@@ -28,7 +28,7 @@ public class DoctorController {
     /*
     THYMELEAF IMPLEMENTATION
      */
-    @GetMapping("/")
+    @GetMapping("getAll")
     public String viewHomePage(Model model) {
         //display a list of doctors
         model.addAttribute("listDoctors", doctorService.getAllDoctor());
@@ -95,10 +95,10 @@ public class DoctorController {
     }
 
     //List all
-    @GetMapping("/getAll")
-    public List<Doctor> getAllDoctors(){
-        return doctorService.getAllDoctor();
-    }
+//    @GetMapping("/getAll")
+//    public List<Doctor> getAllDoctors(){
+//        return doctorService.getAllDoctor();
+//    }
 
 
 }

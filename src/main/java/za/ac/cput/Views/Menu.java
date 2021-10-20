@@ -1,4 +1,4 @@
-package za.ac.cput.Presentation;
+package za.ac.cput.Views;
 
 /**
  *
@@ -100,6 +100,16 @@ public class Menu extends javax.swing.JFrame {
 
     //Manage doctors
     private void doctorsMouseClicked(java.awt.event.MouseEvent evt) {
+        String link = "http://localhost:8080/getAll";
+
+        try {
+            String url = link;
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        } catch (java.io.IOException e) {
+            e.getStackTrace();
+
+        }
+//        this.dispose();
 
     }
 
@@ -172,3 +182,4 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton patients;
     // End of variables declaration
 }
+

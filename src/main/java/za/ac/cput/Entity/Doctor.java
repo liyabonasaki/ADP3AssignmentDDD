@@ -2,19 +2,21 @@
 Doctor.java
 Entity for doctor
 Author : Liyabona Saki (217120830)
+Date : 03 June 2021
  */
 
 package za.ac.cput.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
 
 @Entity
-@Table(name = "doctors")
+@Table(name ="doctors")
+
 public class Doctor {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
     private String lastname;

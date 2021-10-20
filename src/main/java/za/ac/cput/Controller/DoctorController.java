@@ -35,7 +35,7 @@ public class DoctorController {
         return "index";
     }
 
-    @GetMapping("/showNewDoctorForm")
+    @GetMapping("/create")
     //create model attribute to bind form data
     public String showNewDoctorForm(Model model) {
         Doctor doctor = new Doctor();
@@ -63,7 +63,8 @@ public class DoctorController {
 
     //RestController Implementation
     //Create
-    @RequestMapping(value = "/create",method = RequestMethod.POST)
+    /*
+        @RequestMapping(value = "/create",method = RequestMethod.POST)
     public Doctor create(Doctor doctor){
         Doctor newDoctor = DoctorFactory.createDoctor(doctor.getId(),
                 doctor.getName(),
@@ -76,6 +77,8 @@ public class DoctorController {
                 doctor.getPassword());
         return doctorService.create(newDoctor);
     }
+
+     */
 
 //    Read
     @GetMapping("/read/{id}")
